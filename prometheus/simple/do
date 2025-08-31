@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+case "$1" in
+    run)
+        docker run --rm --name simple-prometheus -p 9090:9090 prom/prometheus
+        ;;
+
+    *)
+        echo "No command given"
+        ;;
+esac
